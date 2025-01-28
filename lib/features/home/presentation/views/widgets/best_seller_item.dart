@@ -52,7 +52,7 @@ class BestSellerListViewItem extends StatelessWidget {
                       style: Styles.textStyle30.copyWith(fontFamily: 'sfdf'),
                     ),
                     SizedBox(
-                      width: MediaQuery.of(context).size.width * .15,
+                      width: MediaQuery.of(context).size.width * .14,
                     ),
                     const RatingItem()
                   ],
@@ -65,4 +65,3 @@ class BestSellerListViewItem extends StatelessWidget {
     );
   }
 }
-

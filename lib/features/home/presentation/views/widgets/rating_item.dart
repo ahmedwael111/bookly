@@ -1,3 +1,4 @@
+import 'package:booklyapp/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -6,21 +7,27 @@ class RatingItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
+    return Expanded(
       child: Row(
         children: [
-          Icon(
+          const Icon(
             FontAwesomeIcons.solidStar,
             color: Colors.yellow,
           ),
-          SizedBox(
+          const SizedBox(
             width: 6,
           ),
-          Text('4.8'),
-          SizedBox(
+          const Text(
+            '4.8',
+            style: Styles.textStyle18,
+          ),
+          const SizedBox(
             width: 3,
           ),
-          Text('(434)')
+          Text(
+            '(434)',
+            style: Styles.textStyle14.copyWith(color: Colors.grey),
+          )
         ],
       ),
     );
