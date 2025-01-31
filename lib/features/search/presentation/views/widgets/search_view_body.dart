@@ -26,7 +26,7 @@ class SearchViewBody extends StatelessWidget {
               style: Styles.textStyle18,
             ),
             SizedBox(
-              height: 12,
+              height: 22,
             ),
             Expanded(child: SearchResultListView())
           ],

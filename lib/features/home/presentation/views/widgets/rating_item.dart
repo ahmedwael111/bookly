@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class RatingItem extends StatelessWidget {
-  const RatingItem({super.key,  this.mainAxisAlignment = MainAxisAlignment.start});
- final MainAxisAlignment mainAxisAlignment;
+  const RatingItem(
+      {super.key, this.mainAxisAlignment = MainAxisAlignment.start});
+  final MainAxisAlignment mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment:mainAxisAlignment ,
+      mainAxisAlignment: mainAxisAlignment,
       children: [
         const Icon(
           FontAwesomeIcons.solidStar,
@@ -30,6 +31,6 @@ class RatingItem extends StatelessWidget {
           style: Styles.textStyle14.copyWith(color: Colors.grey),
         )
       ],
-     );
+    );
   }
 }

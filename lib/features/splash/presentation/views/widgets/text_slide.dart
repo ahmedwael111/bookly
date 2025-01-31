@@ -25,5 +25,5 @@ class TextSlide extends StatelessWidget {
   }
 }
 // slidingAnimation.addListener(() {
-    //   setState(() {});
-    // });
+//   setState(() {});
+// });
