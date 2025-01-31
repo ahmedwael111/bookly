@@ -28,9 +28,9 @@ class BookDeitailsViewBody extends StatelessWidget {
             const SizedBox(
               height: 43,
             ),
-            const Text(
+            Text(
               'The Jungle Book',
-              style: Styles.textStyle30,
+              style: Styles.textStyle30.copyWith(fontSize: 40),
             ),
             const SizedBox(
               height: 6,
@@ -51,10 +51,43 @@ class BookDeitailsViewBody extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            const BookActions()
+            const BookActions(),
+            const SizedBox(
+              height: 43,
+            ),
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'You can also like',
+                style: Styles.textStyle18,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const SimilerBooksListView()
           ],
         ),
       ),
+    );
+  }
+}
+
+class SimilerBooksListView extends StatelessWidget {
+  const SimilerBooksListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: MediaQuery.of(context).size.width * .25,
+      child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return const Padding(
+              padding: EdgeInsets.only(right: 10),
+              child: CoustomImageBookItem(),
+            );
+          }),
     );
   }
 }
