@@ -1,6 +1,8 @@
 import 'package:booklyapp/core/utils/assets.dart';
+import 'package:booklyapp/core/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class CostoumAppBar extends StatelessWidget {
   const CostoumAppBar({
@@ -19,7 +21,9 @@ class CostoumAppBar extends StatelessWidget {
           ),
           const Spacer(),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(AppRoutes.kSearchView);
+              },
               icon: const Icon(FontAwesomeIcons.magnifyingGlass))
         ],
       ),
