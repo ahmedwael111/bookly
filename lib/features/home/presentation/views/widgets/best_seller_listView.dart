@@ -1,7 +1,7 @@
 import 'package:booklyapp/core/utils/widgets/coustom_Progress_indicator.dart';
 import 'package:booklyapp/core/utils/widgets/coustom_error_Message.dart';
 import 'package:booklyapp/features/home/presentation/manager/Newest_books_cubit/newest_books_cubit.dart';
-import 'package:booklyapp/features/home/presentation/views/widgets/best_seller_item.dart';
+import 'package:booklyapp/features/home/presentation/views/widgets/newest_book_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,13 +1,9 @@
 import 'package:booklyapp/constants.dart';
-import 'package:booklyapp/core/utils/api_servies.dart';
 import 'package:booklyapp/core/utils/routes.dart';
 import 'package:booklyapp/core/utils/service_locator.dart';
 import 'package:booklyapp/features/home/data/repos/home_reop_impl.dart';
-import 'package:booklyapp/features/home/data/repos/home_repo.dart';
 import 'package:booklyapp/features/home/presentation/manager/Newest_books_cubit/newest_books_cubit.dart';
 import 'package:booklyapp/features/home/presentation/manager/featutred_books_cubit/featured_books_cubit.dart';
-import 'package:booklyapp/features/splash/presentation/views/splash_view.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -30,7 +26,8 @@ class BooklyApp extends StatelessWidget {
           //  ..  named 'Speed opretor'
         ),
         BlocProvider(
-          create: (context) => NewestBooksCubit(getIt.get<HomeReopImpl>())..fetchNewestBooks(),
+          create: (context) =>
+              NewestBooksCubit(getIt.get<HomeReopImpl>())..fetchNewestBooks(),
         ),
       ],
       child: MaterialApp.router(

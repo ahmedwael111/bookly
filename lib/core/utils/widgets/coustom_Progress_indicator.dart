@@ -10,7 +10,7 @@ class Indicator extends StatelessWidget {
       color: Colors.orange,
       // backgroundColor: Colors.red,
       strokeWidth: 5,
-      strokeAlign: 4,
+      strokeAlign: 2,
     ));
   }
 }

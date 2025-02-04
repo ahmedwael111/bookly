@@ -39,8 +39,9 @@ class NewestBooksListViewItem extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                   Text(
+                  Text(
                     bookModel.volumeInfo.authors![0],
+                    maxLines: 1,
                     style: Styles.textStyle16,
                   ),
                   const SizedBox(
@@ -56,8 +57,8 @@ class NewestBooksListViewItem extends StatelessWidget {
                       SizedBox(
                         width: MediaQuery.of(context).size.width * .14,
                       ),
-                       RatingItem(
-                        avrageRating: 0 ,
+                      const RatingItem(
+                        avrageRating: 0,
                         ratingCount: 0,
                       )
                     ],
