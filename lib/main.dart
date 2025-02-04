@@ -25,7 +25,9 @@ class BooklyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => FeaturedBooksCubit(getIt.get<HomeReopImpl>()),
+          create: (context) => FeaturedBooksCubit(getIt.get<HomeReopImpl>())
+            ..fetchFteaturedBooks(),
+          //  ..  named 'Speed opretor'
         ),
         BlocProvider(
           create: (context) => NewestBooksCubit(getIt.get<HomeReopImpl>()),

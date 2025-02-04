@@ -18,7 +18,7 @@ class BestSellerListViewItem extends StatelessWidget {
         height: 140,
         child: Row(
           children: [
-            const CoustomImageBookItem(),
+            const CoustomImageBookItem(imageUrl: 'https://www.google.com/imgres?q=image&imgurl=https%3A%2F%2Fgratisography.com%2Fwp-content%2Fuploads%2F2024%2F11%2Fgratisography-augmented-reality-800x525.jpg&imgrefurl=https%3A%2F%2Fgratisography.com%2F&docid=YAe2I9AqIHgndM&tbnid=gmPO6ub_oOcLkM&vet=12ahUKEwjo9Y2k46iLAxXkVqQEHZCQI3UQM3oECBsQAA..i&w=800&h=525&hcb=2&ved=2ahUKEwjo9Y2k46iLAxXkVqQEHZCQI3UQM3oECBsQAA',),
             const SizedBox(
               width: 30,
             ),
