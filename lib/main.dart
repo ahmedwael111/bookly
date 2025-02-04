@@ -30,7 +30,7 @@ class BooklyApp extends StatelessWidget {
           //  ..  named 'Speed opretor'
         ),
         BlocProvider(
-          create: (context) => NewestBooksCubit(getIt.get<HomeReopImpl>()),
+          create: (context) => NewestBooksCubit(getIt.get<HomeReopImpl>())..fetchNewestBooks(),
         ),
       ],
       child: MaterialApp.router(

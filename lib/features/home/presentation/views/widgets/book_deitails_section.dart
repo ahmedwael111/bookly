@@ -37,9 +37,10 @@ class BookDeitalisSection extends StatelessWidget {
         const SizedBox(
           height: 21,
         ),
-        const RatingItem(
-          mainAxisAlignment: MainAxisAlignment.center,
-        ),
+        // const RatingItem(
+
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        // ),
         const SizedBox(
           height: 40,
         ),
