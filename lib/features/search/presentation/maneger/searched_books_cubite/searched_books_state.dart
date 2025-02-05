@@ -5,6 +5,8 @@ sealed class SearchedBooksState extends Equatable {
 
   @override
   List<Object> get props => [];
+
+  get erroMessage => null;
 }
 
 final class SearchedBooksInitial extends SearchedBooksState {}
