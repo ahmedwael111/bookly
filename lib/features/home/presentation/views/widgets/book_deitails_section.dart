@@ -1,11 +1,16 @@
 import 'package:booklyapp/core/utils/styles.dart';
+import 'package:booklyapp/features/home/data/models/book_model/book_model.dart';
 import 'package:booklyapp/features/home/presentation/views/widgets/book_actions.dart';
 import 'package:booklyapp/features/home/presentation/views/widgets/costom_imageBook_item.dart';
 import 'package:booklyapp/features/home/presentation/views/widgets/rating_item.dart';
 import 'package:flutter/material.dart';
 
 class BookDeitalisSection extends StatelessWidget {
-  const BookDeitalisSection({super.key});
+  const BookDeitalisSection({
+    super.key,
+    required this.bookModel,
+  });
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -15,36 +20,40 @@ class BookDeitalisSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .2),
-          child: const CoustomImageBookItem(imageUrl: 'https://www.google.com/imgres?q=image&imgurl=https%3A%2F%2Fgratisography.com%2Fwp-content%2Fuploads%2F2024%2F11%2Fgratisography-augmented-reality-800x525.jpg&imgrefurl=https%3A%2F%2Fgratisography.com%2F&docid=YAe2I9AqIHgndM&tbnid=gmPO6ub_oOcLkM&vet=12ahUKEwjo9Y2k46iLAxXkVqQEHZCQI3UQM3oECBsQAA..i&w=800&h=525&hcb=2&ved=2ahUKEwjo9Y2k46iLAxXkVqQEHZCQI3UQM3oECBsQAA',),
+          child: CoustomImageBookItem(
+              imageUrl: bookModel.volumeInfo.imageLinks.thumbnail),
         ),
         const SizedBox(
-          height: 43,
+          height: 23,
         ),
         Text(
-          'The Jungle Book',
-          style: Styles.textStyle30.copyWith(fontSize: 40),
+          bookModel.volumeInfo.title ?? '',
+          style: Styles.textStyle20.copyWith(fontSize: 40),
+          maxLines: 2,
+          textAlign: TextAlign.center,
         ),
         const SizedBox(
           height: 6,
         ),
-        const Opacity(
+        Opacity(
           opacity: .7,
           child: Text(
-            'Rudyard kepling',
+            bookModel.volumeInfo.authors?[0] ?? '',
             style: Styles.textStyle18,
           ),
         ),
         const SizedBox(
-          height: 21,
+          height: 15,
         ),
-        // const RatingItem(
-
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        // ),
+        const RatingItem(
+          avrageRating: 0,
+          ratingCount: 0,
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
         const SizedBox(
-          height: 40,
+          height: 20,
         ),
-        const BookActions(),
+         BookActions(bookModel: bookModel,),
       ],
     );
   }

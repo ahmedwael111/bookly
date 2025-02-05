@@ -8,13 +8,14 @@ class CoustomBottom extends StatelessWidget {
     required this.textcolor,
     required this.backgroundColor,
     required this.text,
-    required this.fontWeight,
+    required this.fontWeight, this.onpressed,
   });
   final BorderRadiusGeometry borderRadius;
   final Color textcolor;
   final Color backgroundColor;
   final String text;
   final FontWeight fontWeight;
+  final void Function()? onpressed;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -23,7 +24,7 @@ class CoustomBottom extends StatelessWidget {
         style: TextButton.styleFrom(
             shape: RoundedRectangleBorder(borderRadius: borderRadius),
             backgroundColor: backgroundColor),
-        onPressed: () {},
+        onPressed: onpressed,
         child: Text(
           text,
           style: Styles.textStyle20.copyWith(
