@@ -13,7 +13,7 @@ class NewestBooksListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRoutes.kBookDetailsView);
+        GoRouter.of(context).push(AppRoutes.kBookDetailsView, extra: bookModel);
       },
       child: SizedBox(
         height: 140,
@@ -33,6 +33,7 @@ class NewestBooksListViewItem extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * .6,
                     child: Text(
                       bookModel.volumeInfo.title!,
+                      maxLines: 2,
                       style: Styles.textStyle24,
                     ),
                   ),
