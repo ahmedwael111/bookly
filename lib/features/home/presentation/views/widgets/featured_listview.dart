@@ -1,4 +1,5 @@
 import 'package:booklyapp/core/utils/routes.dart';
+import 'package:booklyapp/core/utils/shimmer_for_images_books.dart';
 import 'package:booklyapp/core/utils/widgets/coustom_Progress_indicator.dart';
 import 'package:booklyapp/core/utils/widgets/coustom_error_Message.dart';
 import 'package:booklyapp/features/home/presentation/manager/featutred_books_cubit/featured_books_cubit.dart';
@@ -39,7 +40,7 @@ class FeaturedListView extends StatelessWidget {
         } else if (state is FeaturedBooksFailure) {
           return CoustomErrorMessage(errorMessage: state.erroMessage);
         } else {
-          return const Indicator();
+          return const ShimmmerForImagesBooks();
         }
       },
     );

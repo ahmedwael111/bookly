@@ -1,4 +1,4 @@
-import 'package:booklyapp/core/utils/widgets/coustom_Progress_indicator.dart';
+import 'package:booklyapp/core/utils/list_books_allData_shimmer.dart';
 import 'package:booklyapp/core/utils/widgets/coustom_error_Message.dart';
 import 'package:booklyapp/features/home/presentation/views/widgets/book_item.dart';
 import 'package:booklyapp/features/search/presentation/maneger/searched_books_cubite/searched_books_cubit.dart';
@@ -31,7 +31,7 @@ class SearchResultListView extends StatelessWidget {
         } else if (state is SearchedBooksFailure) {
           return CoustomErrorMessage(errorMessage: state.erroMessage);
         } else {
-          return const Indicator();
+          return const BookListShimmer();
         }
       },
     );

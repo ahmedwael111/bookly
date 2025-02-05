@@ -1,3 +1,4 @@
+import 'package:booklyapp/core/utils/list_books_allData_shimmer.dart';
 import 'package:booklyapp/core/utils/widgets/coustom_Progress_indicator.dart';
 import 'package:booklyapp/core/utils/widgets/coustom_error_Message.dart';
 import 'package:booklyapp/features/home/presentation/manager/Newest_books_cubit/newest_books_cubit.dart';
@@ -28,7 +29,7 @@ class NewestBooksListView extends StatelessWidget {
         } else if (state is NewestBooksFailure) {
           return CoustomErrorMessage(errorMessage: state.erroMessage);
         } else {
-          return const Indicator();
+          return const BookListShimmer();
         }
       },
     );
